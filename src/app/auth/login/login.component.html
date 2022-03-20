@@ -1,0 +1,15 @@
+<div class="form-container mat-elevation-z5">
+    <h1>LOGIN</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" >
+       <mat-form-field>
+           <input matInput placeholder="Enter your email" formControlName="email" required type="email" />
+       </mat-form-field>
+       <mat-form-field>
+        <input matInput placeholder="Enter your password" formControlName="password" required type="password" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+        <div class="form-footer"><span>You don't have an account?  <button mat-stroked-button color="primary" class="create-account" (click)="openRegister()">Create New Account</button></span></div>
+    </form>
+</div>
+
+<router-outlet></router-outlet>

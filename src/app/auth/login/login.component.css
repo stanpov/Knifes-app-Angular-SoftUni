@@ -1,0 +1,33 @@
+.form-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 50px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    display: flex;
+    margin: auto;
+}
+h1 {
+    margin: auto;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.create-account {
+    margin-top: 10px;
+}
+.mat-button-wrapper {
+    padding: 3px;
+}
