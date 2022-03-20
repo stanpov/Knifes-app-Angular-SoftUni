@@ -1,0 +1,83 @@
+.caroulsel-container {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px #dce1e1;
+}
+
+.caroulsel-container img {
+    display: none;
+    border-radius: 15px;
+}
+
+.caroulsel-container img.image-active {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.caroulsel-dot-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+}
+.dot.active:hover {
+    opacity: 1;
+}
+.dot.active {
+    opacity: 1;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-caroulsel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    text-align: center;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    color: beige;
+}
+
+.btn-prev {
+    left: 0;
+}
+.btn-next {
+    right: 0;
+}

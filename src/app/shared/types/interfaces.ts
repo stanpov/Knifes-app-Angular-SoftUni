@@ -5,3 +5,8 @@ export interface UserData {
     email: string;
     id?: string;
   }
+
+export interface carouselImages {
+  imageSrc: string,
+  imageAlt: string
+}

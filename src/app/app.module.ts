@@ -15,6 +15,8 @@ import { ReactiveFormsModule, } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog'
 
+
+
 import { AppComponent } from './app.component';
 import { environment} from '../environments/environment';
 import { HeaderComponent } from './shared/header/header.component';
@@ -23,7 +25,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component'
+import { RegisterComponent } from './auth/register/register.component';
+import { CarouselComponent } from './shared/carousel/carousel.component';
+import { CarouselModule } from './shared/carousel/carousel.module';
 
 
 
@@ -41,7 +45,8 @@ import { RegisterComponent } from './auth/register/register.component'
     HomeComponent,
     ProductsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ import { RegisterComponent } from './auth/register/register.component'
     HotToastModule,
     ReactiveFormsModule,
     NoopAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    CarouselModule
 
   ],
   providers: [],
