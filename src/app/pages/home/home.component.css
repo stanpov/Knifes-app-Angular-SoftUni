@@ -1,0 +1,26 @@
+.home-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(91,38,39,1) 100%);
+    display: flex;
+    justify-content: space-around;
+}
+.section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mat-form-field {
+    box-shadow: 0 8px 39px 1px;
+}

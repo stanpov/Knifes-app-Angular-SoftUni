@@ -8,5 +8,6 @@ export interface UserData {
 
 export interface carouselImages {
   imageSrc: string,
-  imageAlt: string
+  altTitle: string,
+  id: string
 }

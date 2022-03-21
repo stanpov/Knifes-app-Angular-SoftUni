@@ -1,6 +1,6 @@
 <div *ngIf="images && images.length > 0" class="caroulsel-container">
     <img *ngFor="let image of images let i=index"
-     [src]="image.imageSrc" [alt]="image.imageAlt"
+     [src]="image.imageSrc" [alt]="image.altTitle"
      [ngClass]="{'image-active': selectedIndex === i}" class="fade">
 
      <div *ngIf="indicators" class="caroulsel-dot-container">

@@ -9,7 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select'
 import { HotToastModule } from '@ngneat/hot-toast';
 import { ReactiveFormsModule, } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -65,7 +66,8 @@ import { CarouselModule } from './shared/carousel/carousel.module';
     ReactiveFormsModule,
     NoopAnimationsModule,
     MatDialogModule,
-    CarouselModule
+    CarouselModule,
+    MatSelectModule
 
   ],
   providers: [],
