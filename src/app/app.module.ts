@@ -29,6 +29,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { CarouselModule } from './shared/carousel/carousel.module';
+import { LeftNavComponent } from './shared/left-nav/left-nav.component';
 
 
 
@@ -48,6 +49,7 @@ import { CarouselModule } from './shared/carousel/carousel.module';
     LoginComponent,
     RegisterComponent,
     CarouselComponent,
+    LeftNavComponent,
   ],
   imports: [
     BrowserModule,

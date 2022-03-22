@@ -1,18 +1,31 @@
 <div class="home-container">
     <nav class="top-navigation">
-        <section class="section-left">
-            <div>
-                <mat-form-field appearance="fill">
-                <mat-label style="color: white">Category:</mat-label>
-                <mat-select> 
-                <mat-option *ngFor="let option of category" [value]="option">{{option}}</mat-option>
-                </mat-select>
-                </mat-form-field>
-            </div>
-        </section>
-        <app-carousel [images]="images" [autoSlide]="false"></app-carousel>
-        <section class="section-right">
-            <div>right</div>
-        </section>
+        <ul>
+            <li>Special Offerts</li>
+            <li>Contacts</li>
+            <li>Payment Methods</li>
+            <li>Shipping policy</li>
+        </ul>
     </nav>
+    <main>
+        <section class="left-section">
+            <div class="nav-button-wrapper">
+                <button class="left-section-button left-slide">All</button>
+                <button class="left-section-button left-slide">Kitchen</button>
+                <button class="left-section-button left-slide">Hunting</button>
+                <button class="left-section-button left-slide">Combat</button>
+                <button class="left-section-button left-slide">Sword</button>
+                <button class="left-section-button left-slide">Tools</button>
+            </div>
+            <div>
+                <button mat-mini-fab color="accent"><mat-icon>navigation</mat-icon></button>
+            </div>
+            
+        </section>
+        <section class="caroulsel-wrapper">
+            <app-carousel [images]="images" [autoSlide]="false"></app-carousel>
+        </section>
+    </main>
 </div>
+
+

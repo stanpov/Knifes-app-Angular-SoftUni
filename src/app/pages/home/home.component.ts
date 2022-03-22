@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { ProductsService } from 'src/app/services/products.service';
 import { carouselImages } from 'src/app/shared/types/interfaces';
 
@@ -17,7 +16,8 @@ export class HomeComponent implements OnInit {
    'Sword',
    'Hunting',
    'Special',
-   'Axes'
+   'Axes',
+   'Combat'
  ]
   constructor(private ps: ProductsService) { }
 
