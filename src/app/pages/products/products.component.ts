@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
+import { knifesData } from 'src/app/shared/types/interfaces';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  orderByPrice: boolean = false
+  options: string[] = [
+    'Price',
+    'Views',
+    'Orders',
+    'Quality'
+  ]
+  products: knifesData[] = []
+  constructor(private productServ: ProductsService) { }
 
   ngOnInit(): void {
+    this.productServ.getAllProductsNoFilters().subscribe((response) => {
+      response.forEach((el: any) => {
+        this.products.push({
+          ...el.payload.doc.data(),
+          id: el.payload.doc.id
+        })
+      })
+    })
   }
 
 }

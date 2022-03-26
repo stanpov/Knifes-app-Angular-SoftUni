@@ -34,7 +34,7 @@
 main {
     display: flex;
     width: 100%;
-    padding: 15px 80px;
+    padding: 15px 35px;
     height: 100%;
     justify-content: space-around;
 }
@@ -43,66 +43,46 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
+    min-width: 240px;
     height: 100vh;
     margin-right: 30px;
     background-color: #e8e8e8;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 15px;
-    
 }
-.nav-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
+
 .caroulsel-wrapper {
     display: flex;
     flex: 1;
+    flex-direction: column;
     
 }
-.left-section-button {
-    width: 50%;
-    padding: 7px;
-    border-radius: 8px;
-    border: none;
-    background-color: #465944;
-    color: #fff;
-    text-transform: uppercase;
-    font-style: italic;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 10px; 
-}
-
-.left-slide {
-    transition: 0.3s ease-in-out;
-    z-index: 1;
-}
-.left-slide::before{
-    content: '';
+app-sidebar {
     width: 100%;
     height: 100%;
-    border-radius: 7px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-color: yellowgreen;
-    transition: 0.3s ease-in-out;
 }
-.left-slide:hover {
+.home-info {
+    margin-top: 20px;
+    background-color: #465944;
     color: #fff;
+    padding: 10px;
+    border-radius: 15px;
 }
-.left-slide::before {
-    transform: scaleX(0);
-    transform-origin: left;
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
-.left-slide:hover::before {
-    transform: scaleX(1);
+.follow-us {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    margin-right: 20px;
+}
+h1 {
+    margin-bottom: 15px;
 }

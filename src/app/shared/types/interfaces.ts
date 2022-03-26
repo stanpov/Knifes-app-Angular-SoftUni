@@ -11,3 +11,11 @@ export interface carouselImages {
   altTitle: string,
   id: string
 }
+
+export interface knifesData {
+  img: string,
+  price: number,
+  category: string,
+  quality: number,
+  description: string
+}

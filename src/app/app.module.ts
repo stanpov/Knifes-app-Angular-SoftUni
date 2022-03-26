@@ -15,6 +15,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { ReactiveFormsModule, } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog'
+import { MatCardModule } from '@angular/material/card'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 
 
@@ -29,13 +31,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { CarouselModule } from './shared/carousel/carousel.module';
-import { LeftNavComponent } from './shared/left-nav/left-nav.component';
-
-
-
-
-
-
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 
 
@@ -49,7 +45,7 @@ import { LeftNavComponent } from './shared/left-nav/left-nav.component';
     LoginComponent,
     RegisterComponent,
     CarouselComponent,
-    LeftNavComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +65,9 @@ import { LeftNavComponent } from './shared/left-nav/left-nav.component';
     NoopAnimationsModule,
     MatDialogModule,
     CarouselModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule,
+    MatSlideToggleModule
 
   ],
   providers: [],
