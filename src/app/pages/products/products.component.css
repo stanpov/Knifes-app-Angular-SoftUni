@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
     min-width: 240px;
     margin-right: 30px;
     background-color: #e8e8e8;
@@ -51,12 +50,32 @@ mat-card-actions {
     align-items: center;
 }
 .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 220px;
     border: 1px solid #ddd;
+    margin-left: 20px;
+    margin-bottom: 20px;
     transition: box-shadow 0.45s ease-in-out !important;
 }
 .card-container:hover {
     box-shadow: 0 0 20px rgb(36 37 38 / 85%);
+}
+.price {
+    font-weight: bold;
+}
+mat-card-content {
+    height: 100px;
+    overflow: hidden;
+}
+mat-card-header {
+    display: flex;
+    justify-content: space-evenly;
+}
+.price-holder {
+    display: flex;
+    justify-content: space-between;
 }
 
  

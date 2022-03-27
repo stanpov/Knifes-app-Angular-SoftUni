@@ -1,12 +1,12 @@
 
 <div class="side-bar-container">
 <div class="nav-button-wrapper">
-    <button class="left-section-button left-slide" [routerLink]="['/products']">All</button>
-    <button class="left-section-button left-slide" [routerLink]="['/products']" [queryParams]="{category: 'kitchen'}">Kitchen</button>
-    <button class="left-section-button left-slide" [routerLink]="['/products']" [queryParams]="{category: 'hunting'}">Hunting</button>
-    <button class="left-section-button left-slide" [routerLink]="['/products']" [queryParams]="{category: 'combat'}">Combat</button>
-    <button class="left-section-button left-slide" [routerLink]="['/products']" [queryParams]="{category: 'sword'}">Sword</button>
-    <button class="left-section-button left-slide" [routerLink]="['/products']" [queryParams]="{category: 'tools'}">Tools</button>
+    <button class="left-section-button left-slide" (click)="goTo('all')" >All</button>
+    <button class="left-section-button left-slide" (click)="goTo('kitchen')">Kitchen</button>
+    <button class="left-section-button left-slide" (click)="goTo('hunting')">Hunting</button>
+    <button class="left-section-button left-slide" (click)="goTo('combat')">Combat</button>
+    <button class="left-section-button left-slide" (click)="goTo('sword')">Sword</button>
+    <button class="left-section-button left-slide" (click)="goTo('test')">Tools</button>
 </div>
 <div class="button-holder">
     <button mat-mini-fab color="accent" (click)="scroolTop()"><mat-icon>navigation</mat-icon></button>

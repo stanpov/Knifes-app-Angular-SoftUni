@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { carouselImages, knifesData } from '../shared/types/interfaces';
 
 @Injectable({
@@ -15,7 +14,8 @@ export class ProductsService {
     return this.afs.collection<carouselImages>('news').snapshotChanges()
   }
 
-  getAllProductsNoFilters(): Observable<any> {
+  getAllProductsWithArgument(argument: string | null): Observable<any> {
     return this.afs.collection<knifesData>('all').snapshotChanges()
   }
-}
+  
+ }

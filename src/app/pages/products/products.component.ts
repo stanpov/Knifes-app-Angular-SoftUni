@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ProductsService } from 'src/app/services/products.service';
 import { knifesData } from 'src/app/shared/types/interfaces';
 
@@ -17,17 +20,27 @@ export class ProductsComponent implements OnInit {
     'Quality'
   ]
   products: knifesData[] = []
-  constructor(private productServ: ProductsService) { }
+  queryParam: string | null = null
+
+  constructor(private productServ: ProductsService, private router: Router, private ar: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.productServ.getAllProductsNoFilters().subscribe((response) => {
-      response.forEach((el: any) => {
-        this.products.push({
-          ...el.payload.doc.data(),
-          id: el.payload.doc.id
+    this.ar.queryParams.subscribe((param) => {
+      this.queryParam = param['category']
+      this.products = []
+      this.productServ.getAllProductsWithArgument(this.queryParam).subscribe((response) => {
+        response.forEach((el: any) => {
+          let data = el.payload.doc.data()
+          if (data.category === this.queryParam) {
+            this.products.push({
+              ...data,
+              id: data.id
+            })
+          }
         })
       })
     })
   }
+
 
 }

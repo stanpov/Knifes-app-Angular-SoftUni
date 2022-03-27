@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router ) { }
 
   ngOnInit(): void {
   }
 
   scroolTop() {
     window.scroll(0,0)
+  }
+
+  goTo(param: string) {
+    this.router.navigate(['products'],{ queryParams: { category: param } })
   }
 
 
