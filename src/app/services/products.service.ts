@@ -17,5 +17,9 @@ export class ProductsService {
   getAllProductsByOptionalQuerry(argument?: string | null): Observable<any> {
     return this.afs.collection<knifesData>('all').snapshotChanges()
   }
+
+  getProduct(prodId: string): Observable<knifesData | undefined> {
+    return this.afs.collection<knifesData>('all').doc(prodId).valueChanges()
+  }
   
  }

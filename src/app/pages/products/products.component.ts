@@ -32,10 +32,11 @@ export class ProductsComponent implements OnInit {
         this.productServ.getAllProductsByOptionalQuerry(this.queryParam).subscribe((response) => {
           response.forEach((el: any) => {
             let data = el.payload.doc.data()
+            let prodId = el.payload.doc.id
             if (data.category === this.queryParam) {
               this.products.push({
                 ...data,
-                id: data.id
+                id: prodId
               })
             }
           })
@@ -44,9 +45,10 @@ export class ProductsComponent implements OnInit {
         this.productServ.getAllProductsByOptionalQuerry().subscribe((resp) => {
           resp.forEach((el: any) => {
             let data = el.payload.doc.data()
+            let prodId = el.payload.doc.id
               this.products.push({
                 ...data,
-                id: data.id
+                id: prodId
               })
           })
         })
@@ -54,6 +56,5 @@ export class ProductsComponent implements OnInit {
       
     })
   }
-
 
 }

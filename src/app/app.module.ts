@@ -18,6 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog'
 import { MatCardModule } from '@angular/material/card'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatExpansionModule } from '@angular/material/expansion'
 
 
 
@@ -34,6 +35,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { CarouselModule } from './shared/carousel/carousel.module';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { ProductComponent } from './pages/product/product.component';
 
 
 
@@ -49,6 +51,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     CarouselComponent,
     SidebarComponent,
     SpinnerComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     MatSelectModule,
     MatCardModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
 
   ],
   providers: [],

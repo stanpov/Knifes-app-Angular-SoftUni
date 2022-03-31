@@ -17,5 +17,7 @@ export interface knifesData {
   price: number,
   category: string,
   quality: number,
-  description: string
+  description: string,
+  id: string,
+  comments: string[]
 }
