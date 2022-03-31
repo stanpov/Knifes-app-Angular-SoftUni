@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,7 +9,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(private router: Router ) { }
+  constructor(private router: Router, private prodSer: ProductsService) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +19,7 @@ export class SidebarComponent implements OnInit {
   }
 
   goTo(param: string) {
-    this.router.navigate(['products'],{ queryParams: { category: param } })
+    this.router.navigate(['allProducts'],{ queryParams: { category: param } })
   }
 
 

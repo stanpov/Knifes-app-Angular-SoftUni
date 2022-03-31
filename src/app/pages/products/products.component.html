@@ -15,30 +15,33 @@
                   </mat-form-field>
             </div>
         </div>
-        <div class="products-wrapper">
+        <div class="products-wrapper" *ngIf="products.length > 0; else loading">
             <mat-card class="card-container" *ngFor="let prod of products">
-                <img mat-card-image src={{prod.img}} alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>{{prod.description}}</p>
-                </mat-card-content>
-                <div class="price-holder">
-                  <div><p class="price">${{prod.price}}</p></div>
-                <div *ngIf="prod.quality === 3">
-                  &#9734;&#9734;&#9734;
-                </div>
-                <div *ngIf="prod.quality === 4">
-                  &#9734;&#9734;&#9734;&#9734;
-                </div>
-                <div *ngIf="prod.quality === 5">
-                  &#9734;&#9734;&#9734;&#9734;&#9734;
-                </div>
-                </div>
-                <mat-card-actions>
-                  <button mat-raised-button color="primary" >VIEW</button>
-                  <button mat-raised-button color="warn">ADD TO CARD</button>
-                </mat-card-actions>
-              </mat-card>
+              <img mat-card-image src={{prod.img}} alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>{{prod.description}}</p>
+              </mat-card-content>
+              <div class="price-holder">
+                <div><p class="price">${{prod.price}}</p></div>
+              <div *ngIf="prod.quality === 3">
+                &#9734;&#9734;&#9734;
+              </div>
+              <div *ngIf="prod.quality === 4">
+                &#9734;&#9734;&#9734;&#9734;
+              </div>
+              <div *ngIf="prod.quality === 5">
+                &#9734;&#9734;&#9734;&#9734;&#9734;
+              </div>
+              </div>
+              <mat-card-actions>
+                <button mat-raised-button color="primary" >VIEW</button>
+                <button mat-raised-button color="warn">ADD TO CARD</button>
+              </mat-card-actions>
+            </mat-card>
         </div>
+        <ng-template #loading>
+          <app-spinner></app-spinner>
+        </ng-template>
     </main>
     
     

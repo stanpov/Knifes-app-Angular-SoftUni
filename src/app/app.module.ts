@@ -17,6 +17,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatCardModule } from '@angular/material/card'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 
 
@@ -32,6 +33,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { CarouselModule } from './shared/carousel/carousel.module';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 
 
@@ -46,6 +48,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     RegisterComponent,
     CarouselComponent,
     SidebarComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     CarouselModule,
     MatSelectModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

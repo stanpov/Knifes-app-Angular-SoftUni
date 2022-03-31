@@ -28,17 +28,30 @@ export class ProductsComponent implements OnInit {
     this.ar.queryParams.subscribe((param) => {
       this.queryParam = param['category']
       this.products = []
-      this.productServ.getAllProductsWithArgument(this.queryParam).subscribe((response) => {
-        response.forEach((el: any) => {
-          let data = el.payload.doc.data()
-          if (data.category === this.queryParam) {
-            this.products.push({
-              ...data,
-              id: data.id
-            })
-          }
+      if (this.queryParam !== undefined) {
+        this.productServ.getAllProductsByOptionalQuerry(this.queryParam).subscribe((response) => {
+          response.forEach((el: any) => {
+            let data = el.payload.doc.data()
+            if (data.category === this.queryParam) {
+              this.products.push({
+                ...data,
+                id: data.id
+              })
+            }
+          })
         })
-      })
+      } else {
+        this.productServ.getAllProductsByOptionalQuerry().subscribe((resp) => {
+          resp.forEach((el: any) => {
+            let data = el.payload.doc.data()
+              this.products.push({
+                ...data,
+                id: data.id
+              })
+          })
+        })
+      }
+      
     })
   }
 

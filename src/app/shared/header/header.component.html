@@ -1,7 +1,7 @@
 <nav class="headerNavigation">
     <ul>
         <li><button routerLink="/" mat-button><img src="../../../assets/logo.webp" /></button></li>
-        <li><button routerLink="/products" mat-button>Products<mat-icon>store</mat-icon></button></li>
+        <li><button routerLink="/allProducts" mat-button>Products<mat-icon>store</mat-icon></button></li>
         <li *ngIf="!auth.isLoggedIn;else isLogin"><button routerLink="/login" mat-button>Login<mat-icon>login</mat-icon></button></li>
         <ng-template #isLogin>
             <li><button (click)="logOut()" mat-button>Logout<mat-icon>logout</mat-icon></button></li>

@@ -14,7 +14,7 @@ export class ProductsService {
     return this.afs.collection<carouselImages>('news').snapshotChanges()
   }
 
-  getAllProductsWithArgument(argument: string | null): Observable<any> {
+  getAllProductsByOptionalQuerry(argument?: string | null): Observable<any> {
     return this.afs.collection<knifesData>('all').snapshotChanges()
   }
   
