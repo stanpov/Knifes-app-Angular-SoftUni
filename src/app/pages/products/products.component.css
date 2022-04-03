@@ -1,0 +1,81 @@
+.products-container {
+    display: flex;
+    width: 100%;
+    padding: 15px 35px;
+
+}
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 240px;
+    margin-right: 30px;
+    background-color: #e8e8e8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+}
+.products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+app-sidebar {
+    width: 100%;
+    height: 100%;
+}
+
+app-card {
+    padding: 10px 15px;
+}
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.input-container {
+    display: flex;
+    min-width: 250px;
+    padding: 25px;
+}
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.45s ease-in-out !important;
+}
+.card-container:hover {
+    box-shadow: 0 0 20px rgb(36 37 38 / 85%);
+}
+.price {
+    font-weight: bold;
+}
+mat-card-content {
+    height: 100px;
+    overflow: hidden;
+}
+mat-card-header {
+    display: flex;
+    justify-content: space-evenly;
+}
+.price-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+ 

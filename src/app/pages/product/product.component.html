@@ -1,0 +1,44 @@
+<div class="product-container">
+    <div class="image-container">
+        <img src="{{product?.img}}" />
+    </div>
+    <div class="info-container">
+        <div class="description">
+            <h2>{{product?.description}}</h2>
+        </div>
+        <div class="price-container">
+            <div class="price">
+                <p>PRICE:</p>
+                <p class="price-number">${{product?.price}}</p>
+            </div>
+            <div class="quality-container">
+                <div class="quantity-paragraph">QUALITY:</div>
+                <p class="quality" *ngIf="product?.quality === 3">&#9734;&#9734;&#9734;</p>
+                <p class="quality" *ngIf="product?.quality === 4">&#9734;&#9734;&#9734;&#9734;</p>
+                <p class="quality" *ngIf="product?.quality === 5">&#9734;&#9734;&#9734;&#9734;&#9734;</p>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button mat-button mat-raised-button color="warn" (click)="addToCard(product!,quantity)">ADD TO CARD</button>
+            <button mat-button mat-raised-button color="primary">GO TO CARD</button>
+        </div>
+        <div class="coments-container">
+            <mat-accordion>
+                <mat-expansion-panel true>
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="font-weight: bold;">
+                      Comments from customers:
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div *ngIf="product?.comments?.length! > 0; else noComent">
+                  <div *ngFor="let coment of product?.comments">
+                    <p >{{coment}}</p>
+                  </div>
+                  </div>
+                  <ng-template #noComent><p>No coments yet</p></ng-template>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
