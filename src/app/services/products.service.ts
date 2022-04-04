@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { cardDataProduct, carouselImages, knifesData } from '../shared/types/interfaces';
 
@@ -10,7 +11,7 @@ export class ProductsService {
 
   cardProducts: cardDataProduct[] = []
   priceToPay: number = 0
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore, private router: Router) { }
 
   getCaroulselImages(): Observable<any> {
     return this.afs.collection<carouselImages>('news').snapshotChanges()
@@ -32,6 +33,11 @@ export class ProductsService {
     if (this.cardProducts.length > 0) {
       this.cardProducts
     }
+  }
+
+  clearAllCard() {
+    this.cardProducts = []
+    this.router.navigate([''])
   }
   
  }

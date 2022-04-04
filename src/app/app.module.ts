@@ -36,6 +36,8 @@ import { CarouselModule } from './shared/carousel/carousel.module';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { ProductComponent } from './pages/product/product.component';
+import { CardComponent } from './pages/card/card.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 
@@ -52,6 +54,8 @@ import { ProductComponent } from './pages/product/product.component';
     SidebarComponent,
     SpinnerComponent,
     ProductComponent,
+    CardComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

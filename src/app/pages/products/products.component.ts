@@ -15,8 +15,6 @@ export class ProductsComponent implements OnInit {
   orderByPrice: boolean = false
   options: string[] = [
     'Price',
-    'Views',
-    'Orders',
     'Quality'
   ]
   products: knifesData[] = []

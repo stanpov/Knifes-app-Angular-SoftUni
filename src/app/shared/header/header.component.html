@@ -7,6 +7,6 @@
             <li><button (click)="logOut()" mat-button>Logout<mat-icon>logout</mat-icon></button></li>
         </ng-template>
         
-        <li><button mat-button><mat-icon matBadgeSize="small" matBadgePosition="above after" matBadge={{numberProducts}} matBadgeColor="warn">shopping_cart</mat-icon></button></li>
+        <li><button mat-button routerLink="/card"><mat-icon matBadgeSize="small" matBadgePosition="above after" matBadge={{numberProducts}} matBadgeColor="warn">shopping_cart</mat-icon></button></li>
     </ul>
 </nav>
