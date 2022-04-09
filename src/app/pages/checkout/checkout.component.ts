@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { ProductsService } from 'src/app/services/products.service';
+import { cardDataProduct } from 'src/app/shared/types/interfaces';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  myCard: cardDataProduct[] = []
+  constructor(private authServ: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  startAgain() {
+    this.authServ.logOut()
   }
 
 }

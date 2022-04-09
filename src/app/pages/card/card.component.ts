@@ -46,6 +46,7 @@ export class CardComponent implements OnInit, DoCheck{
   }
 
   payNow() {
+    this.ps.clearAllCard() 
     this.router.navigate(['checkout'])
   }
 

@@ -38,6 +38,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CardComponent } from './pages/card/card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -56,6 +57,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     ProductComponent,
     CardComponent,
     CheckoutComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
