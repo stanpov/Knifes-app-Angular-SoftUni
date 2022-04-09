@@ -37,7 +37,12 @@ export class ProductsService {
 
   clearAllCard() {
     this.cardProducts = []
-    this.router.navigate([''])
+  }
+
+  removeItemFromCard(itemId: string) {
+    let filteredItems = this.cardProducts.filter(item => item.product.id !== itemId)
+    this.cardProducts = filteredItems
+    return this.cardProducts
   }
   
  }

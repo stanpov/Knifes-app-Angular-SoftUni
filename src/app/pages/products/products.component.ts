@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,DoCheck } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,13 +10,8 @@ import { knifesData } from 'src/app/shared/types/interfaces';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit,DoCheck {
 
-  orderByPrice: boolean = false
-  options: string[] = [
-    'Price',
-    'Quality'
-  ]
   products: knifesData[] = []
   queryParam: string | null = null
 
@@ -53,6 +48,8 @@ export class ProductsComponent implements OnInit {
       }
       
     })
+  }
+  ngDoCheck(): void {
   }
 
   addToCard(product: knifesData, quantity: number) {
