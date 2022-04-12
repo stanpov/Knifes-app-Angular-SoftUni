@@ -39,6 +39,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CardComponent } from './pages/card/card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 
 
 
@@ -58,6 +59,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     CardComponent,
     CheckoutComponent,
     ContactsComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import { HotToastService } from '@ngneat/hot-toast';
 export class AuthService {
 
   isLoggedIn: boolean = false
+  isAdmin: boolean = false
   constructor(private auth: AngularFireAuth, private afs: AngularFirestore, private router: Router,private toast: HotToastService) { }
 
   register(email:string,password: string) {
@@ -26,9 +27,13 @@ export class AuthService {
   }
 
   login(email:string,password: string) {
-    this.auth.signInWithEmailAndPassword(email,password).then(() => {
+    this.auth.signInWithEmailAndPassword(email,password).then((data) => {
       this.toast.success('Logged in successfully')
       this.isLoggedIn = true
+      if (data.user?.email === 'admin@admin.com') {
+        this.isAdmin = true
+      }
+      console.log(this.isAdmin)
       this.router.navigate(['/'])
     }).catch(err => {
       this.toast.error(`${err}`)
@@ -39,6 +44,7 @@ export class AuthService {
     this.auth.signOut()
     .then(() => {   
       this.isLoggedIn = false
+      this.isAdmin = false
       this.toast.success('User successfully logged out.')
       this.router.navigate(['/'])
     }).catch(err => {

@@ -50,4 +50,8 @@ export class CardComponent implements OnInit, DoCheck{
     this.router.navigate(['checkout'])
   }
 
+  startShopping() {
+    this.router.navigate(['allProducts'])
+  }
+
 }

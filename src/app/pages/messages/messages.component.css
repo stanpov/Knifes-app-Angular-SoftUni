@@ -1,0 +1,39 @@
+.messages-container {
+    display: flex;
+    padding: 40px 40px;
+    height: 100vh;
+}
+.messages-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.message-main {
+    width: auto;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border: 1px solid black;
+    height: max-content;
+    max-height: 230px;
+    overflow-y:auto;
+    border-top-right-radius: 60px;
+    box-shadow: 0 0 10px rgb(36 37 38 / 85%);
+}
+p {
+    margin-bottom: 5px;
+}
+button {
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    margin: 0 auto;
+}

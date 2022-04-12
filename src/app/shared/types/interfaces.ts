@@ -35,3 +35,11 @@ export interface cardDataProduct {
   }
   
 }
+
+export interface questionData {
+  name: string,
+  phone: number,
+  email: string,
+  questions: string,
+  id: string
+}

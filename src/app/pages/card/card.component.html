@@ -1,22 +1,40 @@
 <div class="card-container">
     <div class="left-side-card" *ngIf="myCard.length > 0; else noProduct">
-    <div class="items-container">
-        <div class="item-wrapper" *ngFor="let prod of myCard">
-            <img src="{{prod.product.img}}" alt="picture of knife" />
-            <div class="item-info">
-                <h5 class="price-holder">Price:</h5>
-                <p> $ {{prod.product.price}}</p>
-                <h5>Quality:</h5>
-                <p>{{prod.product.quality}}</p>
-                <button class="remove-button" mat-button mat-raised-button color="warn" (click)="removeFromCard(prod.product.id)">Remove</button>
+        <div class="items-container">
+            <div class="item-wrapper" *ngFor="let prod of myCard">
+                <img src="{{prod.product.img}}" alt="picture of knife" />
+                <div class="item-info">
+                    <h5 class="price-holder">Price:</h5>
+                    <p> $ {{prod.product.price}}</p>
+                    <h5>Quality:</h5>
+                    <p>{{prod.product.quality}}</p>
+                    <button class="remove-button" mat-button mat-raised-button color="warn"
+                        (click)="removeFromCard(prod.product.id)">Remove</button>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <ng-template #noProduct><div class="nothingToPay"><h2>You dont have any products in your card.</h2></div></ng-template>
+    <ng-template #noProduct>
+        <div class="nothingToPay">
+            <div>
+                <img class="sadFace" src="../../../assets//sadFace.jpg" />
+                <h2>You dont have any products in your card.</h2>
+            </div>
+            <div>
+                <h2>But you still can add products now.</h2>
+                <div class="happy-wrapper">
+                    <img class="happyFace" src="../../../assets/happyFace.png" />
+                    <button class="add-product" mat-button mat-raised-button color="primary"
+                    (click)="startShopping()">START SHOPPING</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
     <div class="right-side-card">
         <h3>TOTAL: ${{this.totalToPay}}</h3>
-        <button class="pay-button" mat-button mat-raised-button color="primary" disabled={{allowToPay}} (click)="payNow()">PAY NOW</button>
-        <button class="pay-button" mat-button mat-raised-button color="warn" disabled={{allowToPay}} (click)="clearCard()">CLEAR CARD</button>
+        <button class="pay-button" mat-button mat-raised-button color="primary" disabled={{allowToPay}}
+            (click)="payNow()">PAY NOW</button>
+        <button class="pay-button" mat-button mat-raised-button color="warn" disabled={{allowToPay}}
+            (click)="clearCard()">CLEAR CARD</button>
     </div>
 </div>
