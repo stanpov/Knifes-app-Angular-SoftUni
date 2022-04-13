@@ -1,0 +1,33 @@
+.shippingPolicy-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+.shippingPolicy-Wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.time-travelling {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: #e8e8e8;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+h5 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}

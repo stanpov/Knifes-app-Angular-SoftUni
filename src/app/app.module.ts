@@ -40,6 +40,8 @@ import { CardComponent } from './pages/card/card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { PaymentMethodsComponent } from './payment-methods/payment-methods.component';
+import { ShippingPolicyComponent } from './shipping-policy/shipping-policy.component';
 
 
 
@@ -60,6 +62,8 @@ import { MessagesComponent } from './pages/messages/messages.component';
     CheckoutComponent,
     ContactsComponent,
     MessagesComponent,
+    PaymentMethodsComponent,
+    ShippingPolicyComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit,DoCheck } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { knifesData } from 'src/app/shared/types/interfaces';
 
@@ -14,8 +15,9 @@ export class ProductsComponent implements OnInit,DoCheck {
 
   products: knifesData[] = []
   queryParam: string | null = null
+  isLoggedIn: boolean = false
 
-  constructor(private productServ: ProductsService, private router: Router, private ar: ActivatedRoute) { }
+  constructor(private productServ: ProductsService, private router: Router, private ar: ActivatedRoute,public as: AuthService) { }
 
   ngOnInit(): void {
     this.ar.queryParams.subscribe((param) => {
@@ -48,6 +50,11 @@ export class ProductsComponent implements OnInit,DoCheck {
       }
       
     })
+    if (this.as.isLoggedIn) {
+      this.isLoggedIn = true
+    } else {
+      this.isLoggedIn = false
+    }
   }
   ngDoCheck(): void {
   }

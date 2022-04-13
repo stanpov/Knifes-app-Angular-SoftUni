@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { knifesData } from 'src/app/shared/types/interfaces';
 
@@ -13,7 +14,8 @@ export class ProductComponent implements OnInit {
   product: knifesData | undefined
   productId: string | null = null
   quantity: number = 1
-  constructor(private af: ProductsService, private ar: ActivatedRoute) { 
+  isLoggedIn: boolean = false
+  constructor(private af: ProductsService, private ar: ActivatedRoute,public as: AuthService) { 
   }
 
   ngOnInit(): void {
@@ -25,7 +27,11 @@ export class ProductComponent implements OnInit {
         this.product = data
       })
     }
-    
+    if (this.as.isLoggedIn) {
+      this.isLoggedIn = true
+    } else {
+      this.isLoggedIn = false
+    }
   }
 
   addToCard(product: knifesData, quantity: number) {

@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="buttons-container">
-            <button mat-button mat-raised-button color="warn" (click)="addToCard(product!,quantity)">ADD TO CARD</button>
+            <button mat-button mat-raised-button color="warn" disabled={{!this.isLoggedIn}} (click)="addToCard(product!,quantity)">ADD TO CARD</button>
             <button mat-button mat-raised-button color="primary" routerLink="/card">GO TO CARD</button>
         </div>
         <div class="coments-container">
