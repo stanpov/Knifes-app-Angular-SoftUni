@@ -30,5 +30,8 @@ export class MessagesComponent implements OnInit {
     this.allMessages = []
     
   }
+  answer() {
+    window.open('mailto:email@example.com?subject=Subject&body=Body%20goes%20here')
+  }
 
 }

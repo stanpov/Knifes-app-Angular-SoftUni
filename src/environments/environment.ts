@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyCNVEmWz2PfTZHzl6AcBRvJaz9dRMFcGIs",
-    authDomain: "knifes-shop-angular-app.firebaseapp.com",
-    projectId: "knifes-shop-angular-app",
-    storageBucket: "knifes-shop-angular-app.appspot.com",
-    messagingSenderId: "150105705364",
-    appId: "1:150105705364:web:9205cd929477943f8ddd81"
+    apiKey: "AIzaSyByrXC7Wkn7DYX2ujJS3JWVRIuwN99xXGw",
+    authDomain: "newproject-a5769.firebaseapp.com",
+    projectId: "newproject-a5769",
+    storageBucket: "newproject-a5769.appspot.com",
+    messagingSenderId: "154473347845",
+    appId: "1:154473347845:web:a5df3d626450ac2bd1d56c"
   }
 };
 

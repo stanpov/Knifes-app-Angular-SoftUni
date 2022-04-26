@@ -6,6 +6,7 @@
             <p><b>Email:</b> {{m.email}}</p>
             <p><b>Message:</b> {{m.questions}}</p>
             <button mat-button mat-raised-button color="warn" (click)="deleteMessage(m.id)"><mat-icon>delete</mat-icon>Delete</button>
+            <button mat-button mat-raised-button color="primary" (click)="answer()"><mat-icon>contact_mail</mat-icon>Answer</button>
         </div>  
     </div>
     <ng-template #noMessages>
