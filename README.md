@@ -1,5 +1,13 @@
 # KnifesApp
 
+##BACKEND - 
+This project is using Firebase for manage the database
+
+##FRONTEND -
+For better view in this project I am using Angular Material UI
+For the pop up messages I am using Hot Toast library.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
 
 ## Development server
