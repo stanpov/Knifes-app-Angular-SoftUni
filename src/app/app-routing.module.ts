@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { CardComponent } from './pages/card/card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'contacts', component: ContactsComponent},
   {path: 'messages', component: MessagesComponent,canActivate:[AuthGuardService]},
   {path: 'payment-methods', component: PaymentMethodsComponent},
-  {path: 'shipping-policy', component: ShippingPolicyComponent}
+  {path: 'shipping-policy', component: ShippingPolicyComponent},
+  {path: 'admin-panel', component: AdminPanelComponent,canActivate:[AuthGuardService]}
 ];
 
 @NgModule({

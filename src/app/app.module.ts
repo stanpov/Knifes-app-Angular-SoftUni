@@ -42,6 +42,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { PaymentMethodsComponent } from './payment-methods/payment-methods.component';
 import { ShippingPolicyComponent } from './shipping-policy/shipping-policy.component';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 
 
 
@@ -64,6 +65,7 @@ import { ShippingPolicyComponent } from './shipping-policy/shipping-policy.compo
     MessagesComponent,
     PaymentMethodsComponent,
     ShippingPolicyComponent,
+    AdminPanelComponent,
   ],
   imports: [
     BrowserModule,

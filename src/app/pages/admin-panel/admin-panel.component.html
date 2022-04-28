@@ -1,0 +1,27 @@
+<div class="login-container">
+    <div class="form-container mat-elevation-z5">
+        <h1>UPLOAD NEW ITEM</h1>
+        <form [formGroup]="uploadForm" (ngSubmit)="submit()" >
+           <mat-form-field>
+               <input matInput placeholder="Enter image src path" formControlName="imgSrc" required type="text" />
+           </mat-form-field>
+           <mat-form-field>
+            <input matInput placeholder="Enter item price" formControlName="price" required type="number" [min]="1" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter item quality" formControlName="quality" required type="number" [max]="5" [min]="0" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter item description" formControlName="description" required type="text" />
+        </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose an option</mat-label>
+                <select matNativeControl formControlName="category">
+                  <option *ngFor="let catValue of categoryValues" [ngValue]="catValue">{{catValue}}</option>
+                </select>
+              </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+            <!-- <div class="form-footer"><span>You don't have an account?  <button mat-stroked-button color="primary" class="create-account" (click)="openRegister()">Create New Account</button></span></div> -->
+        </form>
+    </div>
+</div>

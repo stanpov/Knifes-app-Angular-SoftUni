@@ -39,6 +39,9 @@
                 </mat-expansion-panel>
             </mat-accordion>
         </div>
+        <div *ngIf="isLoggedIn && isAdmin" class="admin-delete-btn">
+            <button mat-button mat-raised-button color="warn" (click)="deleteItem(productId!)">DELETE</button>
+        </div> 
     </div>
 </div>
 

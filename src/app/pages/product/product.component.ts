@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
   productId: string | null = null
   quantity: number = 1
   isLoggedIn: boolean = false
+  isAdmin: boolean = false
   constructor(private af: ProductsService, private ar: ActivatedRoute,public as: AuthService) { 
   }
 
@@ -32,11 +33,19 @@ export class ProductComponent implements OnInit {
     } else {
       this.isLoggedIn = false
     }
+    if(this.as.isAdmin) {
+      this.isAdmin = true
+    } else {
+      this.isAdmin = false
+    }
   }
 
   addToCard(product: knifesData, quantity: number) {
-    console.log(quantity)
     this.af.addToCard(product, quantity)
+  }
+
+  deleteItem(productId: string) {
+    this.af.deleteItem(productId)
   }
 
 }
